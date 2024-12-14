@@ -47,7 +47,6 @@ namespace :script do
         execute "source #{release_path}/project_env/bin/activate"
         execute "pip install -r #{release_path}/requirements.txt"
         execute "python3 #{release_path}/script.py"
-        execute "cd #{release_path} && deactivate"
       end
     end
   end
