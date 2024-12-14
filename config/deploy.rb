@@ -44,7 +44,7 @@ namespace :script do
   task :run do
     on roles(:app) do
       within release_path do
-        execute 'source /var/www/html/telegram_sends/bin/activate'
+        execute 'source /var/www/html/telegram_sends/project_env/bin/activate'
         execute 'pip install -r requirements.txt'
         execute 'python ./script.py'
         execute 'deactivate'
